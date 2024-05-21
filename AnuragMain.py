@@ -38,7 +38,7 @@ st.write("$$\\color{white}{\\text{Guess this four digit flag to reveal our inten
 st.markdown("<p style='color:white'>Clue #1 : Thou hath already posses this key within thy mobile.</p>", unsafe_allow_html=True)
 st.markdown("<p style='color:white'>Clue #2 : Despite numerous awards and accolades perhaps a recent and novel accomplishment holds the true secret.</p>", unsafe_allow_html=True)
 st.markdown("<p style='color:white'>Clue #3 : Image</p>", unsafe_allow_html=True)
-st.image("unknownLogo.jpeg", caption="The image we were just talking about.")
+st.image("UnknownLogo.jpeg", caption="The image we were just talking about.")
 
 
 with st.popover("Get a hint -> Lose 5 pts"):
