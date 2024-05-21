@@ -7,7 +7,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-MAX_ATTEMPTS = 10
+MAX_ATTEMPTS = 2
 
 try:
     num_attempts = pd.read_csv("NumTries.csv")
@@ -57,18 +57,19 @@ def check_flag():
         st.error("You have exceeded the maximum number of tries. Contact Kayan for further assistance.")
         return 
     
-    num_attempts.iloc[0, 1] += 1
-    num_attempts.to_csv("NumTries.csv", index=False)
+    
 
     hash = hashlib.md5(flag.encode())
     hash = hash.hexdigest()
     if hash == "6346dc723395e1ee8ef57f4883be4cb4":
         url = f"https://eservices.moec.gov.ae/eservices/Certificate?D=3085803&lang=en"
-        st.error("Congrats! You're a nerd. You have ten seconds to accept reality before life moves on.")
+        st.error("Congrats! You're a nerd. You must accept reality before life moves on.")
         st.image("AnuragNerd.jpeg", caption="Anurag is a nerd")
-        time.sleep(10)
-        webbrowser.open(url, new=1)
+        st.link_button("Click to reveal the memory associated with this CTF.", url)
+
     else:
+        num_attempts.iloc[0, 1] += 1
+        num_attempts.to_csv("NumTries.csv", index=False)
         x = st.error("Noob")
         st.image("AnuragFail.JPG", caption="Anurag is a noob")
 
