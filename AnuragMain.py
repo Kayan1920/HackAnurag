@@ -55,6 +55,7 @@ def check_flag():
     num_attempts = pd.read_csv("NumTries.csv")
     if num_attempts.iloc[0, 1] >= MAX_ATTEMPTS:
         st.error("You have exceeded the maximum number of tries. Contact Kayan for further assistance.")
+        return 
     
     num_attempts.iloc[0, 1] += 1
     num_attempts.to_csv("NumTries.csv", index=False)
