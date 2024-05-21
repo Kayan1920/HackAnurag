@@ -16,7 +16,7 @@ if st.button("Submit"):
     if hash == "6346dc723395e1ee8ef57f4883be4cb4":
         url = f"https://eservices.moec.gov.ae/eservices/Certificate?D=3085803&lang=en"
         st.error("Congrats! You're a nerd. You have ten seconds to accept reality before life moves on.")
-        st.image("AnuragNerd.JPEG", caption="Anurag is a nerd")
+        st.image("AnuragNerd.jpeg", caption="Anurag is a nerd")
         time.sleep(10)
         webbrowser.open(url, new=1)
     else:
