@@ -7,7 +7,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-MAX_ATTEMPTS = 2
+MAX_ATTEMPTS = 10
 
 try:
     num_attempts = pd.read_csv("NumTries.csv")
