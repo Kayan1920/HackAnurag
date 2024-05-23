@@ -7,6 +7,12 @@ import streamlit as st
 import requests
 import pandas as pd
 
+st.markdown("""
+<style>
+    #MainMenu, header, footer {visibility: hidden;}
+</style>
+""",unsafe_allow_html=True)
+
 MAX_ATTEMPTS = 10
 
 try:
